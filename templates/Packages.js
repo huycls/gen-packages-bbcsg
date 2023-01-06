@@ -1,14 +1,11 @@
 import { Tab } from "@headlessui/react";
-import { FaCheck } from "components/atoms/Icon/fa/FaCheck";
-import Title from "components/atoms/Title";
+import { FaCheck } from "../icons/fa/FaCheck";
 import { Fragment, useState } from "react";
+import { GoPrimitiveDot } from "../icons/go/GoPrimitiveDot";
 
-import PopupPackage from "components/molecules/PopupPackage";
-import { GoPrimitiveDot } from "components/atoms/Icon/go/GoPrimitiveDot";
-
-const Packages = ({ cost, dataIncorporation }) => {
-  let [isOpen, setIsOpen] = useState(false);
-  const [valueSelected, setValueSelected] = useState("2");
+export const Packages = ({ cost, dataIncorporation }) => {
+  // let [isOpen, setIsOpen] = useState(false);
+  // const [valueSelected, setValueSelected] = useState("2");
   return (
     <section>
       <div className="container mt-10 lg:mt-[115px] px-0">
@@ -47,8 +44,7 @@ const Packages = ({ cost, dataIncorporation }) => {
                         </p>
                       </div>
                     )}
-                    <Title
-                      as="h2"
+                    <h2
                       className={`${
                         item.isStar
                           ? "text-[#FFAB00]"
@@ -58,7 +54,7 @@ const Packages = ({ cost, dataIncorporation }) => {
                       } text-[32px] leading-[42px] font-semibold text-center mb-8`}
                     >
                       <div>{data?.PackageType?.name.toUpperCase()}</div>
-                    </Title>
+                    </h2>
                     <p
                       className={`${
                         item.isStar
@@ -203,8 +199,7 @@ const Packages = ({ cost, dataIncorporation }) => {
                             </p>
                           </div>
                         )}
-                        <Title
-                          as="h2"
+                        <h2
                           className={`${
                             item.isStar
                               ? "text-[#FFAB00]"
@@ -214,7 +209,7 @@ const Packages = ({ cost, dataIncorporation }) => {
                           } text-[32px] leading-[42px] font-semibold text-center mb-8`}
                         >
                           {data?.PackageType?.name.toUpperCase()}
-                        </Title>
+                        </h2>
                         <p
                           className={`${
                             item.isStar
@@ -305,13 +300,6 @@ const Packages = ({ cost, dataIncorporation }) => {
           </Tab.Group>
         </div>
       </div>
-      <PopupPackage
-        isOpen={isOpen}
-        setIsopen={setIsOpen}
-        valueSelected={valueSelected}
-      />
     </section>
   );
 };
-
-export default Packages;
