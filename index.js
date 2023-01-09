@@ -1,7 +1,7 @@
-import { Tab } from "@headlessui/react";
-import { FaCheck } from "./src/icons/fa/FaCheck";
-import { Fragment, useState } from "react";
 import { GoPrimitiveDot } from "./src/icons/go/GoPrimitiveDot";
+import { FaCheck } from "./src/icons/fa/FaCheck";
+const { Fragment } = require("react");
+const { Tab } = require("@headlessui/react");
 
 export const Packages = ({ cost, dataIncorporation }) => {
   // let [isOpen, setIsOpen] = useState(false);
