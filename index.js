@@ -1,5 +1,5 @@
-import { GoPrimitiveDot } from "./src/icons/go/GoPrimitiveDot";
-import { FaCheck } from "./src/icons/fa/FaCheck";
+const { GoPrimitiveDot } = require("./src/icons/go/GoPrimitiveDot");
+const { FaCheck } = require("./src/icons/fa/FaCheck");
 const { Fragment } = require("react");
 const { Tab } = require("@headlessui/react");
 
