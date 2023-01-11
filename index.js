@@ -3,7 +3,7 @@ const { FaCheck } = require("./src/icons/fa/FaCheck");
 const { Fragment } = require("react");
 const { Tab } = require("@headlessui/react");
 
-export const Packages = ({ cost, dataIncorporation }) => {
+module.exports = function Packages({ cost, dataIncorporation }) {
   // let [isOpen, setIsOpen] = useState(false);
   // const [valueSelected, setValueSelected] = useState("2");
   return (
